@@ -25,16 +25,23 @@
 // })
 
 
+//same file
+// const EventEmitter = require('events')
+// const emitter = new EventEmitter();
 
-const EventEmitter = require('events')
-const emitter = new EventEmitter();
+// emitter.on('event1', () => {
+//     console.log("event1 file")
+// })
+// emitter.on('event2', (e) => {
+//     console.log("event2 file", e)
+// })
 
-emitter.on('event1', () => {
-    console.log("event1 file")
-})
-emitter.on('event2', (e) => {
-    console.log("event2 file", e)
-})
+// emitter.emit('event2', { name: "jahidul Islam", age: 38 })
 
-emitter.emit('event2', { name: "jahidul Islam", age: 38 })
-
+//another file
+// const MyEvent = require('./myEvents')
+// const myEvent = new MyEvent();
+// myEvent.on('event1', () => {
+//     console.log("event file from myevent filesss")
+// })
+// myEvent.function1();
