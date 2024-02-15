@@ -8,8 +8,6 @@ module.exports.sum = sum
 
 exports.name = name;
 
-console.log(module)
-
 
 
 

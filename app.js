@@ -1,1 +1,3 @@
-console.log(module);
+const circle = require('./circle')
+
+console.log(circle)
