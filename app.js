@@ -1,3 +1,3 @@
 const circle = require('./circle')
 
-console.log(circle.cicle(3))
+console.log(circle(3))
