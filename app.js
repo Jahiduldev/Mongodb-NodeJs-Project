@@ -1,47 +1,18 @@
-// const circle = require('./circle')
-// console.log(circle(3))
+///Http module
+const http = require('http')
+const server = http.Server((request, response) => {
 
+    if (request.url === '/') {
+        response.write("Hellow word")
+        response.end()
+    }
 
+    if (request.url === '/student') {
+        response.write("Hellow word student")
+        response.end()
+    }
 
-//const fs = require('fs')
-//sync
-// let text = fs.readFileSync('./files/demo.txt', 'utf-8')
-//fs.writeFileSync('./files/writefile.txt', text, 'utf-8')
+})
 
-
-// //async
-// fs.readFile('./files/demo.txt', 'utf-8', (error, result) => {
-//     if (error) {
-//         console.log(error)
-//     } else {
-//         console.log(result)
-//         fs.writeFile('./files/writefile.txt', result, 'utf-8', (error) => {
-//             if (error) {
-//                 console.log(error)
-//             }
-//         })
-//     }
-
-// })
-
-
-//same file
-// const EventEmitter = require('events')
-// const emitter = new EventEmitter();
-
-// emitter.on('event1', () => {
-//     console.log("event1 file")
-// })
-// emitter.on('event2', (e) => {
-//     console.log("event2 file", e)
-// })
-
-// emitter.emit('event2', { name: "jahidul Islam", age: 38 })
-
-//another file
-// const MyEvent = require('./myEvents')
-// const myEvent = new MyEvent();
-// myEvent.on('event1', () => {
-//     console.log("event file from myevent filesss")
-// })
-// myEvent.function1();
+server.listen(3000)
+console.log('listenning on port 3000')
